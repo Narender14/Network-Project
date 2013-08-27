@@ -37,15 +37,17 @@ for the data. It is displayed in navigation bar of the browser. We can copy the 
 building an extension to the Chrome browser which takes the URL from user to download the data and gives him choice
 to save data in preferred filename.
 
-Phase1: When user wants to download some data he can click on the Chrome Extension Icon. Clicking on which will open a popup window. User can input the URL in the given text field and he/she can give preferred file name to save data under that name. To start download he/she can click on the download button below it.
+Phase1: When user wants to download some data he can click on the Chrome Extension Icon. Clicking on which will open a
+popup window. User can input the URL in the given text field and he/she can give preferred file name to save data under
+that name. To start download he/she can click on the download button below it.
 
 CHROME BROWSER EXTENSION: There are three files in the folder DownManager.crx namely
 
 icon.jpg (This is the icon displayed in extension)
-manifest.json (This is manifesto file contains information about extension we created such as version number, purpose, browser actions)
-popup.html (This html file displays a popup on clicking the extension)
+manifest.json (This is manifesto file contains information about extension we created such as version number, purpose,
+browser actions)popup.html (This html file displays a popup on clicking the extension)
 
-The extension shot is
+The chrome extension shot is
 
 
 ![ScreenShot](https://raw.github.com/Narender14/Network-Project/master/chrome.jpg)
@@ -63,25 +65,32 @@ Phase2:
 
 When popup.html is opened it calls the address of server requesting file Welcome.php, it also defines the size of popup
 that is going to be open.Now at server side script welcome.php comes in role, which displays the background image of 
-popup, two text fields one for URL and other for File name under which data is suppose to be save, one submit button with name download on it, one link for accessing all the files that are already present in server.
+popup, two text fields one for URL and other for File name under which data is suppose to be save, one submit button 
+with name download on it, one link for accessing all the files that are already present in server.
 
 Phase3:
 
-When user fills this form and presses Download button URL and Filename is sent to the script Kai.php.
-Kai.php script finds out the size of data to be downloaded and current date.
-Now Kai.php connects to the database which is present at server and verifies whether same URL is present in database or
-not. If same URL is present in database then it says that File already present on server else it enters a new entry in database corresponding to the new URL which is name of file, URL, size, date when it is requested and status. Status is kept as 0, which means file is not downloaded yet. 
+When user fills this form and presses Download button URL and Filename is sent to the script Database.php.
+Database.php script finds out the size of data to be downloaded and current date.Now Database.php connects to the database
+which is present at server and verifies whether same URL is present in database or not. If same URL is present in 
+database then it says that File already present on server else it enters a new entry in database corresponding to the 
+new URL which is name of file, URL, size, date when it is requested and status. Status is kept as 0, which means file
+is not downloaded yet. 
 
 Phase4:
 
 At server side using cron tab we can initiate any process any specific time automatically, for this purpose we have to
 update entry in cron file. If we want some process to automate at specific time then we have to define at what time we
 want process to start and we have to write corresponding execution command. So we have updated two entries one for
-cron.php which pick one entry from database that is suppose to be downloaded and other for hello.php which removes older entries, we will discuss both of them one by one below.
-So when cron initiates cron.php it picks one entry from database in FCFS manner and pass URL of that entry to hack99.py 
-hack99.py file takes the URL and saves the file under the filename provided by user in same directory in which hack99.py is present.
-After finishing download by hack99.py, cron.php updates the database by updating corresponding status entry of 
-downloaded file by 1, which means file is completed downloading. hello.php file checks that if a file is older than a prespecified time then it removes that file from memory of server and also corresponding database entry.
+cron.php which pick one entry from database that is suppose to be downloaded and other for Delete_file.php which removes
+older entries, we will discuss both of them one by one below.So when cron initiates cron.php it picks one entry from 
+database in FCFS manner and pass URL of that entry to Download.py. Download.py file takes the URL and saves the file under 
+the filename provided by user in same directory in which hack99.py is present.After finishing download by Download.py, 
+cron.php updates the database by updating corresponding status entry of downloaded file by 1, which means file is 
+completed downloading. hello.php file checks that if a file is older than a prespecified time then it removes that 
+file from memory of server and also corresponding database entry.
+
+Data.php shows the downloaded files whenever user ask for it. It traverse the database and list those.
 
 
 The Schematic Diagram of project is 
@@ -90,10 +99,16 @@ The Schematic Diagram of project is
 ![ScreenShot](https://raw.github.com/Narender14/Network-Project/master/complete.jpg)
 
 
-Contribution :
+Future Work/Contribution :
 ---------------
 
-Currently it has only suppport 5 semester. It can be extended further. Any idea, bug report or patch is welcome.
+Currently we are searching file only on the basis of URL we can improve our search by searching file on the basis of URL,
+File size and File name in database.
+
+We have to deal with the issue of when and which file to delete for that we can check the left memory space in server
+if it is less than some particular value then we can delete some file.
+
+Any further idea, bug report or patch is welcome.
 
     Simply fork the repo and clone it to your local machine and start contributing.
 
