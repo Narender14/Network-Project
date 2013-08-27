@@ -45,7 +45,7 @@ icon.jpg (This is the icon displayed in extension)
 manifest.json (This is manifesto file contains information about extension we created such as version number, purpose, browser actions)
 popup.html (This html file displays a popup on clicking the extension)
 
-The extension shot is ![ScreenShot](https://github.com/Narender14/Network-Project/master/chrome.jpeg)
+The extension shot is ![ScreenShot](https://raw.github.com/Narender14/Network-Project/master/chrome.png)
 
 Server Side :-
 -------------
