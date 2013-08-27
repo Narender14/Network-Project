@@ -1,0 +1,15 @@
+Network - 
+
+A table is created which has fields
+
+1) Welcome.php -----> Welcome page and that has to be filled by user.
+
+2) Download.py  -----> It downloades the file using python.
+
+3) Delete_file.php -----> It deletes the file by calculating the threshold time admin has given for a file to be on the Server storage and after that using system 			command it deletes it.
+
+4) Database.php -----> It checks whether the file is already present or not(by name), it calculate the size of remote file and then insert the file name and other 			details needed for the database.
+
+5) Data.php -----> It shows the downloaded files whenever user ask for it. It traverse the database and list those.
+
+6) Cron.php -----> It will check the status of file at a particular time and if file is already downloaded then it will update its status bit in database.

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+
+  "name": "Download Manager",
+  "description": "This extension lets you download any file over internet.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.jpg",
+    "default_popup": "popup.html"
+  }
+}
