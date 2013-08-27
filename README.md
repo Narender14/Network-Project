@@ -48,7 +48,7 @@ popup.html (This html file displays a popup on clicking the extension)
 The extension shot is
 
 
-![ScreenShot](https://github.com/Narender14/Network-Project/blob/master/chrome.jpg)
+![ScreenShot](https://raw.github.com/Narender14/Network-Project/blob/master/chrome.jpg)
 
 
 Server Side :-
@@ -87,7 +87,7 @@ downloaded file by 1, which means file is completed downloading. hello.php file 
 The Schematic Diagram of project is 
 
 
-![ScreenShot](https://github.com/Narender14/Network-Project/blob/master/complete.jpg)
+![ScreenShot](https://raw.github.com/Narender14/Network-Project/blob/master/complete.jpg)
 
 
 Contribution :
