@@ -1,14 +1,9 @@
-Android-GPA Calculator :
+Network Project :
 ========================
 
 Build a GUI Interface which provides the user the facility to send the requests to the server. The server downloads the
 content based on the request and stores it temporarily in its own memory for a fixed time interval. The user will have 
 the flexibility to see the content downloaded and indexed by the server and download it at his own convenience. 
-
-![ScreenShot](https://raw.github.com/Narender14/Android-GPA/master/GPA 2.png)   
-
-Another screen shot can be scene [HERE](https://github.com/Narender14/Android-GPA/master/GPA 1.png)
-
 
 Motivation :
 ------------
