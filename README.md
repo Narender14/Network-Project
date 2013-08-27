@@ -45,7 +45,7 @@ icon.jpg (This is the icon displayed in extension)
 manifest.json (This is manifesto file contains information about extension we created such as version number, purpose, browser actions)
 popup.html (This html file displays a popup on clicking the extension)
 
-The extension shot is ![ScreenShot](https://raw.github.com/Narender14/Network-Project/master/chrome.png)
+The extension shot is ![ScreenShot](https://github.com/Narender14/Network-Project/blob/master/chrome.jpg)
 
 Server Side :-
 -------------
@@ -80,7 +80,7 @@ After finishing download by hack99.py, cron.php updates the database by updating
 downloaded file by 1, which means file is completed downloading. hello.php file checks that if a file is older than a prespecified time then it removes that file from memory of server and also corresponding database entry.
 
 
-The Schematic Diagram of project is ![ScreenShot](https://github.com/Narender14/Network-Project/master/complete.jpeg)
+The Schematic Diagram of project is ![ScreenShot](https://github.com/Narender14/Network-Project/blob/master/complete.jpg)
 
 Contribution :
 ---------------
