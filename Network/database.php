@@ -52,14 +52,7 @@ if(!mysqli_query($con, $sql))
 }
 echo "1 record added -> Your request has been sent";
 
-#echo $retval;
-#system('python hack99.py');
-#$file = fopen("nirvana2.html", "w");
-#if($file)
-#{
-#fwrite($file, $retval);
-#fclose($file);
-#}
+
 }
 mysqli_close($con);
 
