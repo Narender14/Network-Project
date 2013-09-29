@@ -18,8 +18,7 @@ if($result)
 		$your_date = strtotime("$row[time]");
 		$datediff = $now - $your_date;
 		$difference=floor($datediff/(60*60*24));
-		echo $difference;
-		echo " ";
+	
 		if($difference>5){
 		system('rm /var/www/Network/'.$var2.' ', $retval);
 		#echo "i am here";
