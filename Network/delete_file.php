@@ -21,7 +21,7 @@ if($result)
 	
 		if($difference>5){
 		system('rm /var/www/Network/'.$var2.' ', $retval);
-		#echo "i am here";
+	
 		$r="DELETE FROM downloads where url='".$row[url]."'";
 		$current=mysqli_query($con, $r);			
 
